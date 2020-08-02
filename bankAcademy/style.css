@@ -69,8 +69,9 @@ ul{
     border: none;
     padding: 3px;
     width: 80px;
+    font-size: 16px;
     margin-left: 10px;
-   color: rgba(129, 129, 146, 0.767);
+   color: #818192c4;
     background: #f2f7fc;
 }
 .main-nav ul select option{
@@ -105,6 +106,7 @@ ul{
 .right-menu i{
     color: rgb(44, 37, 37);
     justify-items: center;
+    font-size: 18px;
 }
 .aboutMain{
     width: 100%;
@@ -151,7 +153,6 @@ ul{
 }
 .showcase img{
     width: 350px;
-    
     margin-right: 50px;
 }
 .showcase .desc {
@@ -173,8 +174,9 @@ ul{
 .showcase p{
     font-size: 18px;
     max-width: 400px;
+    font-weight: bold;
     text-align: start;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     letter-spacing: 1.4px;
     
 }
@@ -183,6 +185,8 @@ ul{
     position: absolute;
     align-self: flex-start;
     left: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgb(145, 120, 120);
 }
 
 /* Menu - 2 */
@@ -231,6 +235,9 @@ ul{
     padding: 30px;
     max-width: 1200px;
     margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cart_salom .carts{
     display: flex;
@@ -291,7 +298,7 @@ ul{
 /* Shops */
 .shop{
     background-image: url('img/shop.png');
-    background-position: center;
+    background-position: 70%;
     max-width: 1145px;
     margin: 10px auto;
     height: 330px;
@@ -631,7 +638,10 @@ padding: 30px;
     font-size: 22px;
     transition: 1.5s;
 }
+.sosial .container .icons .icon img{
+    width: 100px;
 
+}
 .sosial .container .icons a:nth-child(1):hover{
     background-color: #27528f;
     color: white;
@@ -668,7 +678,7 @@ padding: 30px;
 /* Xbox */
 
 .links{
-    background: #ebe5e5;
+    background: #262a30ef;
     color: #013438e1;
     font-size: 14px;
     padding: 30px 0;
@@ -677,7 +687,6 @@ padding: 30px;
 .links-inner{
     max-width: 1100px;
     display: grid;
-    border: 1px solid red;
     margin: 0 auto;
     padding: 0 20px;
     justify-content: center;
@@ -685,15 +694,32 @@ padding: 30px;
     grid-gap: 10px;
     align-items: flex-start;
 }
-.links-inner li{
-    line-height:3.5;
+
+.links-inner  li{
+    line-height: 1.8;
+    color: #a1a1a1;
+    font: 17px;
+    cursor: pointer;
+    max-width: 150px;
+}
+.links-inner  li:hover{
+    color: whitesmoke;
 }
 
+.links h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #9fa0a1;
+}
 
 .main-footer{
-    background: #ebe5e5;
+    background: #000000;
     font-size: 14px;
     padding: 20px 0;
+}
+.main-footer div,  i{
+    color: rgb(212, 212, 212);
+    font-size: 18px;
 }
 .footer-inner{
     max-width: 1100px;
@@ -720,9 +746,10 @@ padding: 30px;
         margin: 0;
     }
 }
+
 @media (max-width: 870px){
-    
-.main-nav{
+  
+    .main-nav{
     padding: 30px 8px;
    
 }
@@ -774,7 +801,9 @@ padding: 30px;
     .main-nav ul.main-menu.show li:nth-last-child(1){
         border-bottom: none;
     }
-
+    .about{
+        margin-left: 10px;
+    }
     .esho{
         display: none;
     }
@@ -782,10 +811,10 @@ padding: 30px;
         height: 400px;
     }
     .showcase img{
-       width: 300px;
+       width: 290px;
        position: absolute;
        top: 30%;
-       left: 19%;
+       left: 15%;
     }
     .about{
         margin-left: -20px;
@@ -817,23 +846,65 @@ padding: 30px;
         padding: 0;
     }
 
+   
     .cart_salom .carts{
         display: block;
+       
+    }
+    .cart_salom .carts .box-all{
+        width: 300px;
+    }
+    .cart_salom .carts .box-all .box-1 h2{
+        font-size: 19px;
+    }
+    .cart_salom .carts .box-all .box-1 p{
+        font-size: 15px;
+    }
+    .cart_salom .carts .box-all .box-1 a{
+        font-size: 15px;
     }
     .cart_salom .carts .box-all img{
-        width: 280px;
+        width: 240px;
     }
     .cart_salom .carts .box-all{
        margin-top: 10px;
-        flex-direction: column;
+      flex-direction: column;
     }
+    
+    
+.shop .text h2{
+    font-size: 19px;
+}
+
+.shop .text p{
+    font-size: 15px;
+}
+.shop .text a{
+    font-size: 17px;
+    padding: 6px 6px 10px 6px;
+    
+}
 
 .three-div .container {
     flex-direction: column;
 }
+.three-div .container h2{
+    font-size: 16px;
+}
+
+
 .money .container .contant{
     flex-direction: column;
 }
+
+/* 
+
+
+.new-section .container .all-2 .main .boxes i{
+    font-size: 20px;
+} */
+   
+
     .new-section  {
         height: auto;
     }
@@ -846,14 +917,21 @@ padding: 30px;
     
     }
     .new-section .container img{
-        width: 300px;
+        width: 250px;
+        margin-top: -40px;
         margin-bottom: 50px;
     }
     .new-section .container {
         margin-left: 20px;
     }
-    .new-section .container .all-2 .main .h2 h2 a{
-        font-size: 19px;
+    .new-section .container .all-2 .main .boxes .pmain{
+        font-size: 14px;
+    }
+    .new-section .container .all-2 .main h2{
+        font-size: 17px;
+    }
+    .new-section .container .all-2 .main .h2  a{
+        font-size: 17px;
     }
     .new-section .container .padrobno{
         margin-top: 100px;
@@ -861,11 +939,25 @@ padding: 30px;
     }
     .new-section .container .all-2 .boxes-2 p{
        max-width: 500px;
+       font-size: 15px;
     }
-    .money .container .contant{
-        margin: 0 auto;
+    .new-section .container .padrobno{
+        color: teal;
+        font-size: 17px;
+        padding: 10px;
     }
+
+    .money .container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .money .container div h2{
+        font-size: 22px;
+    } 
+   
     .money .container .contant .table{
+        margin-left: 0;
         padding: 0;
         min-width: auto;
     }
@@ -876,12 +968,31 @@ padding: 30px;
     .money .container .contant .table td{
         padding: 10px;
     }
+
+    .money .container .convert{
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* New Session */
     .app_mobyl .container {
         margin: 0;
     }
-    .sosial .container .icons{
-        grid-template-columns: repeat(3, 100px);
 
+    /* new */
+    .sosial{
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+    }
+    .sosial .container .icons{
+        grid-template-columns: repeat(2, 130px);
+        grid-gap: 10px;
+            
+    }
+    .sosial .container .icons .icon img{
+        width: 50px;
+        
     }
     .sosial .container .icons .icon{
         height: 100px;
