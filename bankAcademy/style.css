@@ -816,9 +816,7 @@ padding: 30px;
        top: 30%;
        left: 15%;
     }
-    .about{
-        margin-left: -20px;
-    }
+    
     .right-menu  i{
        font-size: 22px;
     }
@@ -949,8 +947,9 @@ padding: 30px;
 
     .money .container {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-direction: column;
+        align-items: center;
     }
     .money .container div h2{
         font-size: 22px;
@@ -981,13 +980,15 @@ padding: 30px;
 
     /* new */
     .sosial{
-        border: 1px solid red;
         display: flex;
+        align-items: center;
         justify-content: center;
+        
     }
     .sosial .container .icons{
-        grid-template-columns: repeat(2, 130px);
+        grid-template-columns: repeat(2, 140px);
         grid-gap: 10px;
+        margin: 0;
             
     }
     .sosial .container .icons .icon img{
@@ -996,11 +997,31 @@ padding: 30px;
     }
     .sosial .container .icons .icon{
         height: 100px;
+        justify-content: center;
+        align-items: center;
         font-size: 13px;
         align-content: center;
         padding: 0;
     }
+    .links .links-inner li{
+        font-size: 13px;
+    }
 
+    .links .links-inner li h3{
+        font-size: 16px;
+      
+    }
+    .footer-inner div i {
+        font-size: 15px;
+ 
+     }
+    .footer-inner div {
+       font-size: 11px;
+
+    }
+    .footer-inner ul li{
+       font-size: 11px;
+    }
 }
 @media (max-width: 500px){
     .home-cards{
