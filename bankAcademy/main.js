@@ -4,6 +4,34 @@ const month = ["Январ", "Февраль", "Март", "Апрель", "Ма
     , "Ноябрь", "Декабрь"]
 dateEl.innerHTML = date.getDate() + " " + month[date.getMonth()] + " " + date.getFullYear();
 
+
+
+
+var menu_btn = document.querySelector(".menu-bars");
+var menu_main = document.querySelector(".main-nav ul.main-menu");
+
+menu_btn.addEventListener("click", function(){
+
+    if(menu_main.classList.contains("trans-xM")){
+        menu_main.classList.remove('trans-xM') 
+        menu_main.classList.add('trans-xP') 
+    } else {
+        menu_main.classList.remove('trans-xP') 
+        menu_main.classList.add('trans-xM')
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
 function totalMoney() {
     let sum = document.getElementById("number_money").value;
 

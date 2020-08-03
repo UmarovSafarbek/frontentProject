@@ -740,6 +740,11 @@ padding: 30px;
 .footer-inner ul li{
     margin-left: 20px;
 }
+
+
+/* class for menu */
+
+
 @media (max-width: 900px){
     .sing{
         display: none;
@@ -778,21 +783,30 @@ padding: 30px;
     .right-menu{
         margin-right: 50px;
     }
+  
     .main-nav ul.main-menu{
         display: block;
         position: absolute;
-        top: 0;
-        left: 0;
-        background: #b2b2b4;
+        top: 8%;
+        left: -7.5%;
+        background: #0d0d0f;
         width: 100%;
         height: 100%;
         border-right: 1px solid black;
-        opacity: 0.8;
+        opacity: 1.8;
         padding: 30px;
+        color:
+        white;
         transition: 1.5s;
-        transform: translateX(-900px);
-        z-index: 3;
+        z-index: 12;
     }
+    .trans-xM{
+        transform: translateX(-920px);
+    }
+    .trans-xP{
+        transform: translateX(0px);
+    }
+    
     .main-nav ul.main-menu li{
         padding: 10px;
         border-bottom: #ccc solid 1px;
