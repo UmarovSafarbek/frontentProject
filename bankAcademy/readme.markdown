@@ -1,1 +1,1 @@
-<img src='banckAcademy/img/site/'>
+<img src='banckAcademy/img/site/test.png'>
