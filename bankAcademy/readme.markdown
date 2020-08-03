@@ -3,7 +3,8 @@
 
 <h1>In PC</h1>
 <img src='img/site/main.png'>
-
+<img src='img/site/main2.png'>
+<img src='img/site/main4.png'>
 <h1>In phone</h1>
 <img src='img/site/inPhone1.png'>
 <img src='img/site/phone2.png'>
