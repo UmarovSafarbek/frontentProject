@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(17, 16, 16);
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background: #5D4954;
+    background: #11a099;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -52,53 +52,6 @@ nav{
     display: none;
 }
 
-.burger div{
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-}
-@media screen and (max-width: 1024px){
-    .nav-links{
-
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 768px){
-    body{
-        overflow: hidden;
-    }
-    .nav-links{
-        position: absolute;
-        left: 0;
-        height: 90vh;
-        top: 8vh;
-        background: #5D4954;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        transform: translateX(-100%);
-        transition: transform 0.5s ease-in;
-        z-index: 3;
-    }
-
-    .nav-links li{
-        opacity: 0;
-    }
-
-
-
-    .burger{
-        display: block;
-        cursor: pointer;
-    }
-}
-
-.nav-active{
-    transform: translateX(0%);
-}
-
 @keyframes navLink{
     from{
         opacity: 0;
@@ -121,19 +74,49 @@ nav{
     transform: rotate(45deg ) translate( -5px, -6px);
 }
 
-.demoAlphabet{
-    height: 94vh;
-    position: relative;
-    overflow: hidden;
+
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+
+        width: 60%;
+    }
 }
-.demoAlphabet .alphabet{
-    position: absolute;
-    font-size: 90px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    z-index: 0;
-    pointer-events: none;
-    animation: animae ease 7s infinite;
+
+@media screen and (max-width: 768px){
+    body{
+        overflow: hidden;
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 2e003abbd610cc5fb2cd6dc741ce1c7c8b1163fc
+    }
+    .nav-links{
+        position: absolute;
+        left: 0;
+        height: 90vh;
+        top: 8vh;
+        background: #11a099;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        z-index: 3;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
 }
+
 
 
 @keyframes animae{
@@ -147,3 +130,54 @@ nav{
   
   
 }
+
+/* Burger button for open nav bar */
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+
+
+/* For animation section */
+.demoAlphabet{
+    height: 94vh;
+    position: relative;
+    overflow: hidden;
+<<<<<<< HEAD
+    background: rgb(255, 255, 255);
+=======
+>>>>>>> 2e003abbd610cc5fb2cd6dc741ce1c7c8b1163fc
+}
+.demoAlphabet .alphabet{
+    position: absolute;
+    font-size: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 0;
+    text-shadow: 1.5px 1.5px 4px black;
+    pointer-events: none;
+    animation: animae ease 7s infinite;
+}
+<<<<<<< HEAD
+=======
+
+
+@keyframes animae{
+    20%{
+        transform: scale(1) translateX(0);
+    }
+
+    80%{
+        transform: scale(0);
+    }
+  
+  
+}
+>>>>>>> 2e003abbd610cc5fb2cd6dc741ce1c7c8b1163fc
