@@ -37,30 +37,114 @@ nav{
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 30%;
     list-style: none;
 }
 
 .nav-links a{
     color: white;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 5px;
+
+}
+.nav-links a:hover{
+    color: rgb(248, 252, 17);
+    border: 1px rgb(211, 207, 7) solid;
+    border-radius: 4px;
 }
 
 .burger{
     display: none;
 }
 
-@keyframes navLink{
-    from{
-        opacity: 0;
-        transform: translateX(-50px);
-    } to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+
+
+/* For animation section */
+.demoAlphabet{
+    height: 94vh;
+    position: relative;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
 }
+.demoAlphabet .alphabet{
+    position: absolute;
+    font-size: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 0;
+    text-shadow: 1.5px 1.5px 4px black;
+    pointer-events: none;
+    animation: animae ease 7s infinite;
+}
+
+
+/* Дар бораи сайт */
+.description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: auto;
+    z-index: 1;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.description h2{
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    color: rgb(21, 30, 31);
+    line-height: 55px;
+    margin-bottom: 15px;
+    background: rgb(251, 253, 255);
+    text-shadow: 1px 2px 5px rgb(4, 7, 8);
+
+}
+.description span{
+    background: rgb(251, 253, 255);
+    font-size: 30px;
+    color: rgb(21, 29, 26);
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.description p{
+    font-size: 25px;
+    line-height: 3rem;
+    background: rgb(251, 253, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.description button{
+    padding: 20px 50px;
+    font-size: 25px;
+    font-weight: 800;
+    background-color: #dbdbdb;
+    border: 1px solid rgb(150, 26, 26);
+    cursor: pointer;
+    color: rgb(40, 158, 85);
+    margin-top: 15px;
+    outline: none;
+    border: 2px solid rgb(107, 219, 3);
+    border-top-color: #11a099;
+    border-bottom-color: rgb(0, 255, 55);
+    border-left-color: aqua;
+    border-right-color: rgb(23, 119, 143);
+    transition: 1s ease-out;
+}
+.description button:hover{
+    border-top-color: #3a7471;
+    border-bottom-color: rgb(10, 37, 161);
+    border-left-color: rgb(255, 0, 212);
+    border-right-color: rgb(212, 105, 5);
+}
+
 
 
 .toggel .line1{
@@ -86,7 +170,6 @@ nav{
 @media screen and (max-width: 768px){
     body{
         overflow: hidden;
-
     }
     .nav-links{
         position: absolute;
@@ -112,6 +195,29 @@ nav{
         display: block;
         cursor: pointer;
     }
+
+    /* About site */
+    .description{
+        width: 100%;
+    }  
+.description h2{
+    font-size: 30px;
+    line-height: normal;
+}
+.description span{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.description p{
+    font-size: 20px;
+    line-height: 1.8rem;
+}
+
+.description button{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
 }
 
 
@@ -127,6 +233,17 @@ nav{
   
   
 }
+
+@keyframes navLink{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 
 /* Burger button for open nav bar */
 .burger div{
@@ -143,34 +260,4 @@ nav{
 
 
 
-/* For animation section */
-.demoAlphabet{
-    height: 94vh;
-    position: relative;
-    overflow: hidden;
-    background: rgb(255, 255, 255);
-
-}
-.demoAlphabet .alphabet{
-    position: absolute;
-    font-size: 90px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    z-index: 0;
-    text-shadow: 1.5px 1.5px 4px black;
-    pointer-events: none;
-    animation: animae ease 7s infinite;
-}
-
-
-@keyframes animae{
-    20%{
-        transform: scale(1) translateX(0);
-    }
-
-    80%{
-        transform: scale(0);
-    }
-  
-  
-}
 
