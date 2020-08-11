@@ -86,10 +86,7 @@ nav{
 @media screen and (max-width: 768px){
     body{
         overflow: hidden;
-<<<<<<< HEAD
-        
-=======
->>>>>>> 2e003abbd610cc5fb2cd6dc741ce1c7c8b1163fc
+
     }
     .nav-links{
         position: absolute;
@@ -151,10 +148,8 @@ nav{
     height: 94vh;
     position: relative;
     overflow: hidden;
-<<<<<<< HEAD
     background: rgb(255, 255, 255);
-=======
->>>>>>> 2e003abbd610cc5fb2cd6dc741ce1c7c8b1163fc
+
 }
 .demoAlphabet .alphabet{
     position: absolute;
@@ -165,8 +160,6 @@ nav{
     pointer-events: none;
     animation: animae ease 7s infinite;
 }
-<<<<<<< HEAD
-=======
 
 
 @keyframes animae{
@@ -180,4 +173,4 @@ nav{
   
   
 }
->>>>>>> 2e003abbd610cc5fb2cd6dc741ce1c7c8b1163fc
+
