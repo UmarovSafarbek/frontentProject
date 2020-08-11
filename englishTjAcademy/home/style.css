@@ -124,6 +124,7 @@ nav{
 .demoAlphabet{
     height: 94vh;
     position: relative;
+    overflow: hidden;
 }
 .demoAlphabet .alphabet{
     position: absolute;
