@@ -100,12 +100,12 @@ nav{
     color: rgb(21, 30, 31);
     line-height: 55px;
     margin-bottom: 15px;
-    background: rgb(251, 253, 255);
+    
     text-shadow: 1px 2px 5px rgb(4, 7, 8);
 
 }
 .description span{
-    background: rgb(251, 253, 255);
+
     font-size: 30px;
     color: rgb(21, 29, 26);
     font-weight: bold;
@@ -115,7 +115,7 @@ nav{
 .description p{
     font-size: 25px;
     line-height: 3rem;
-    background: rgb(251, 253, 255);
+
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-family: 'Playfair Display', serif;
