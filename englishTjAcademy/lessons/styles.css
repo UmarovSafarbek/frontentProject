@@ -1,0 +1,308 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: rgb(8, 143, 221);
+    font-weight: 900;
+}
+.info{
+    color: rgb(6, 142, 184);
+}
+.family1{
+    font-family: 'PT Serif', serif;
+}
+
+.family2 {
+    font-family: 'Antic Slab', serif;
+}
+.word{
+    color: rgb(0, 80, 228);
+    font-style: italic;
+    font-size: 19px;
+}
+.cword{
+    color: rgb(46, 88, 102);
+    font-weight: bold;
+}
+
+body{
+    background-color: rgba(236, 236, 236, 0.842);
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: #11a099;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 5px;
+
+}
+.nav-links a:hover{
+    color: rgb(248, 252, 17);
+    border: 1px rgb(211, 207, 7) solid;
+    border-radius: 4px;
+}
+
+.burger{
+    display: none;
+}
+
+
+
+/* For animation section */
+.demoAlphabet{
+    height: 94vh;
+    position: relative;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+}
+.demoAlphabet .alphabet{
+    position: absolute;
+    font-size: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 0;
+    text-shadow: 1.5px 1.5px 4px black;
+    pointer-events: none;
+    animation: animae ease 7s infinite;
+}
+
+
+
+
+.toggel .line1{
+    transform: rotate(-45deg ) translate(-5px, 6px);
+}
+
+.toggel .line2{
+    opacity: 0;
+}
+.toggel .line3{
+    transform: rotate(45deg ) translate( -5px, -6px);
+}
+
+/* End nav bar */
+
+
+/* Start Section Alphabet  */
+.alphabet {
+    width: 100%;
+    padding: 5px;
+}
+
+.alphabet .container-table{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 14px;
+    word-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.alphabet .container-table h1:first-child{
+    font-size: 25px;
+    color: rgb(5, 3, 107);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    text-shadow: 2px 1px 5px rgb(0, 0, 0) ;
+}
+.alphabet .container-table h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #6f6f83;
+}
+.alphabet .container-table h1 p{
+    margin-top: 6px;
+}
+.alphabet .container-table table{
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.431);
+    color: rgb(7, 4, 4);
+    text-align: center;
+    width: 50%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+.alphabet .container-table table thead tr th{
+    border: 1.4px solid rgb(250, 250, 250);
+    font-size: 25px;
+    padding: 5px;
+    background-color: black;
+    color: #0ef3cd;
+    font-weight: bolder;
+}
+
+.alphabet .container-table .div1  table tr td:nth-child(2){
+    font-weight: 900;
+}
+.alphabet .container-table  table tr td{
+    border: 1px solid rgb(121, 109, 109);
+    padding: 5px;
+    font-size: 23px;
+}
+
+.alphabet .grammar{
+    width: 60%;
+    text-align: left;
+    background: rgb(253, 253, 253);
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    text-indent: 20px;
+}
+
+.alphabet .grammar h2{
+    margin: 15px;
+}
+
+
+/* End Section Alphabet  */
+
+
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 850px){
+   
+    .nav-links{
+        position: absolute;
+        left: 0;
+        height: 90vh;
+        top: 8vh;
+        background: #11a099;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        z-index: 3;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    /* Start alpabet section */
+    .alphabet{
+        overflow-x: hidden;
+    }
+    .alphabet .container-table table{
+        width: auto;
+    }
+
+.alphabet .container-table table thead tr th{
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+    .alphabet .container-table  table tr td{
+        padding: 4px 0;
+        font-size: 16px;
+    }
+    
+    .alphabet .grammar{ 
+        width: 95%;
+        font-size: 16px;
+    }
+    .alphabet .grammar table{
+        width: 90%;
+       
+    }  
+    /* end alphabet section */
+}
+
+
+
+@keyframes animae{
+    20%{
+        transform: scale(1) translateX(0);
+    }
+
+    80%{
+        transform: scale(0);
+    }
+  
+  
+}
+
+@keyframes navLink{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+/* Burger button for open nav bar */
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    
+}
+
+
