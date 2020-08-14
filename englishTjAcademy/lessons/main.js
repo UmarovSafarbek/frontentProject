@@ -29,3 +29,18 @@ navSlide()
 
 
 
+
+// Show pronoun sentences test
+
+var showPron  = document.querySelector(".showPronounSent");
+showPron.addEventListener("click", (e) => {
+    var sent = document.querySelector('.sentenceWithP');
+    if(sent.style.display == "none") {
+        sent.style.display = 'block'
+        e.target.innerText = 'Пушидани ҷавоб!'
+    } else {
+        sent.style.display = 'none'
+        e.target.innerText = 'Намоиши ҷавоб!'
+
+    }
+})
