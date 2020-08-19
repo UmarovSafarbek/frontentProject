@@ -7,6 +7,8 @@
 body{
     background-color: rgb(255, 255, 255);
     overflow: hidden;
+
+
 }
 
 
@@ -72,7 +74,7 @@ nav{
 .demoAlphabet .alphabet{
     position: absolute;
     font-size: 90px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Noto Sans JP', sans-serif;
     z-index: 0;
     text-shadow: 1.5px 1.5px 4px black;
     pointer-events: none;

@@ -155,14 +155,16 @@ var test20 = document.getElementById("20test");
 
 // If click choosing buttons
 test10.onclick = test10Fun;
-test20.onclick = test20Fun;
+test20.onclick = test10Fun;
 beOkhirTest.onclick = beOkhir;
 
 
 const Tests = new Test();
 
 
-
+//Choose div demo
+var demoChoose = document.querySelector('.chooseTest');
+console.log(demoChoose);
 //Show answer button
 const showAnswerButton = document.getElementById('show');
 //Next question
@@ -182,7 +184,7 @@ var demoTranslate = document.querySelector('.translate');
 var index = 0;
 //10 Test Exercise function
 function test10Fun(e) {
-    e.target.parentElement.style.display = 'none'
+    demoChoose.style.display = 'none'
     section.style.display = ''
     //index of test 
     //spans
@@ -190,7 +192,7 @@ function test10Fun(e) {
     //add span 10 
     
     // Ten test rendom 
-    let tenTest = Tests.getTests(questions, 10);
+    let tenTest = Tests.getTests(questions, e.target.dataset.num);
     demoTranslate.innerText = index + 1 + ". " + tenTest[index].answer;
     //if buttom word clicked in demo buttona choose
     demoButtonWord.addEventListener("click", (e) => {
@@ -271,100 +273,13 @@ function test10Fun(e) {
 
 
 
-//20 Test Exercise
-function test20Fun(e) {
-    e.target.parentElement.style.display = 'none'
-    section.style.display = ''
-    //index of test 
-    //spans
-    let spans = document.querySelector(".lines").getElementsByTagName("span");
-    //add span 10 
-    
-    // Ten test rendom 
-    let tenTest = Tests.getTests(questions, 20);
-    demoTranslate.innerText = index + 1 + ". " + tenTest[index].answer;
-    //if buttom word clicked in demo buttona choose
-    demoButtonWord.addEventListener("click", (e) => {
-        Tests.addWordToDemoAnswer(e.target)
-    })
-    //if buttom word clicked in demo check
-    demoChek.addEventListener("click", (e) => {
-        Tests.addWordToDemoAnswer(e.target)
-
-    })
-
-
-    // correct and wrong index
-    var correct = 0;
-    var wrong = 0;
-    //Check annswer
-        Tests.putTest(tenTest[index]);
-        showAnswerButton.addEventListener("click", (e) => {
-            
-          
-            if(index < tenTest.length) {
-            if (Tests.checkIsEmptyDemoWord()) {
-                if (Tests.checkIsCorrect()) {
-                    demoButtonWord.innerHTML = `<span class='correctAnswer'>Офарин! Шумо дурст ҷавоб додед! <br> ${tenTest[index].question} </span>`;
-                    Tests.removeClass();
-                    showAnswerButton.disabled = true;
-                    nextQuestion.disabled = false
-                    spans[index].style.background = 'green'
-                    index++;
-                    correct++
-                } else {
-                    demoButtonWord.innerHTML = `<span style='color: red;' class='correctAnswer'>
-                    Шумо нодуруст ҷавоб додед! <br>Ҷавоби дуруст: 
-                    <span style='color: teal;'>${tenTest[index].question} </span>
-                     </span>`;
-                    Tests.removeClass();
-                    showAnswerButton.disabled = true;
-                    nextQuestion.disabled = false
-                    spans[index].style.background = 'red'
-                    index++;
-                    wrong++;
-                }
-            } else {
-                Tests.checkIsEmptyDemoWord()
-            }
-            if (index < tenTest.length ) {
-                nextQuestion.addEventListener("click", () => {
-                    demoChek.innerHTML = ''
-                    Tests.putTest(tenTest[index]);
-                    showAnswerButton.disabled = false;
-                    nextQuestion.disabled = true
-                    demoTranslate.innerText = index + 1 + ". " + tenTest[index].answer;
-
-                })} else{
-                    nextQuestion.style.display = 'none'
-                    showAnswerButton.style.display ='none'
-                    newWorkButton.style.display = ''
-                    newTest.style.display = ''
-                    newWorkButton.onclick = (e) => {
-                        demoChek.innerHTML = ''
-                        demoTranslate.innerHTML = ''
-                        demoButtonWord.innerHTML = `
-                        <div class="ansewrAll">
-                        <p>Ҷавоби дуруст кор кардаи шумо: ${correct} </p>
-                        <p>Ҷавоби нодуруст кор кардаи шумо: ${wrong}</p>
-                    </div>
-                        `
-                    }
-                }
-            } 
-        })
-       
-
-   
-}
-
-
 // Infinity test
 function beOkhir(e) {
     e.target.parentElement.style.display = 'none'
     section.style.display = ''
     lines.style.display = 'none'
     Tests.putTest(randomTest());
+    demoTranslate.innerText = Tests.question.answer;
     demoButtonWord.addEventListener("click", (e) => {
         Tests.addWordToDemoAnswer(e.target)
     })
@@ -400,6 +315,8 @@ function beOkhir(e) {
         Tests.putTest(randomTest());
         showAnswerButton.disabled = false;
         nextQuestion.disabled = true;
+        demoTranslate.innerText = Tests.question.answer;
+
     }
 
 
