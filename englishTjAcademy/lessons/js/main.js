@@ -2,9 +2,11 @@ const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
     const list = document.querySelectorAll(".nav-links li")
-   
+    
     burger.addEventListener("click", () =>{ 
+        
         nav.classList.toggle("nav-active")
+      
 
         list.forEach((link, index) => {
             if(link.style.animation){
@@ -44,3 +46,5 @@ showPron.addEventListener("click", (e) => {
 
     }
 })
+
+

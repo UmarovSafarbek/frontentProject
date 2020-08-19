@@ -27,13 +27,13 @@ navSlide()
 
 // body animation
 
-var  alphabetLowerCase = ['a','b', 'English','c','d','e','f','g','h', "tajik",'i','j'
+var  alphabetLowerCase = ['a','b', 'c','d','e','f','g','h','i','j'
                         ,'k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 var  alphabetUpperCase = alphabetLowerCase.join(' ').toLocaleUpperCase().split(" ");
 const alphabet = [...alphabetLowerCase, ...alphabetUpperCase];
 const colors = ['#0efddd', '#fd0e91', '#0efd22',
-                '#03fa93', '#fdd10e', '#ffa602',
-                '#db0a95', "#000000", ]
+                '#03fa93', '#fdd10e', '#ffa602', '#a1caff',
+                '#db0a95', "#000000", '#006d67', "#072927", '#c705a7']
 function createAlphabet() {
     var span = document.createElement("span");
     span.classList.add("alphabet");
