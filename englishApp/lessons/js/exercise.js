@@ -257,8 +257,8 @@ function test10Fun(e) {
                     demoTranslate.innerHTML = ''
                     demoButtonWord.innerHTML = `
                         <div class="ansewrAll">
-                        <p>Ҷавоби дуруст кор кардаи шумо: ${correct} </p>
-                        <p>Ҷавоби нодуруст кор кардаи шумо: ${wrong}</p>
+                        <p>Ваши правильние ответы: ${correct} </p>
+                        <p>Ваши неправильние ответи: ${wrong}</p>
                     </div>
                         `
                 }
