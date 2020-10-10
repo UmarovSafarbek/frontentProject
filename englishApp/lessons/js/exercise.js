@@ -295,7 +295,7 @@ function beOkhir(e) {
         if (Tests.checkIsEmptyDemoWord()) {
             if (Tests.checkIsCorrect()) {
                 Tests.removeClass()
-                demoButtonWord.innerHTML = `<span class='correctAnswer'>Офарин! Шумо дурст ҷавоб додед! <br> ${Tests.question.question} </span>`;
+                demoButtonWord.innerHTML = `<span class='correctAnswer'>Круто! Вы ответили правильно! <br> ${Tests.question.question} </span>`;
                 showAnswerButton.disabled = true;
                 nextQuestion.disabled = false
             } else {
@@ -303,7 +303,7 @@ function beOkhir(e) {
                 nextQuestion.disabled = false
                 Tests.removeClass();
                 demoButtonWord.innerHTML = `<span style='color: red;' class='correctAnswer'>
-                Шумо нодуруст ҷавоб додед! <br>Ҷавоби дуруст: 
+                Хмм не правильно! <br>Правилны: 
                 <span style='color: teal;'>${Tests.question.question} </span>
                  </span>`;
             }
