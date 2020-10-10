@@ -1,9 +1,9 @@
 # frontentProjects
 
-1. <h3>You can see this project bankAcademy on browser<a href='https://umarovsafarbek.github.io/frontentProjects/bankAcademy/index.html'> Click here to see </a></h3>
+1. <h3>You can see <h2><span style='color: lightblue'></span></h2> project on browser<a href='https://umarovsafarbek.github.io/frontentProjects/bankAcademy/index.html'> Click here to see </a></h3>
 
 
 2. <h3>See my English application web on browser!!!!! <a href="https://umarovsafarbek.github.io/frontentProjects/englishApp/lessons/exercise.html">Click here</a> to see App</h3>
 It is look like duolingo 
 
-<img src='englishApp/lessons/img/engMan.png'>
+<img src='englishApp/img/engManin.png'>
