@@ -6,4 +6,4 @@
 2. <h3>See my English application web on browser!!!!! <a href="https://umarovsafarbek.github.io/frontentProjects/englishApp/lessons/exercise.html">Click here</a> to see App</h3>
 It is look like duolingo 
 
-<img src='englishApp/img/engManin.png'>
+<img src='englishApp/img/engMain.png'>
