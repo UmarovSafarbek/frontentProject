@@ -117,7 +117,7 @@ class Test {
 
     checkIsEmptyDemoWord() {
         if (demoButtonWord.hasChildNodes()) {
-            massege.innerText = "Лутфан ҳами калимаҳоро интихоб кунед"
+            massege.innerText = "Пожалуйста выберите все слово"
             setTimeout(() => massege.innerText = '', 3000);
             return false;
         }
@@ -164,7 +164,7 @@ const Tests = new Test();
 
 //Choose div demo
 var demoChoose = document.querySelector('.chooseTest');
-console.log(demoChoose);
+
 //Show answer button
 const showAnswerButton = document.getElementById('show');
 //Next question
@@ -190,7 +190,7 @@ function test10Fun(e) {
     //spans
     let spans = document.querySelector(".lines").getElementsByTagName("span");
     //add span 10 
-    
+
     // Ten test rendom 
     let tenTest = Tests.getTests(questions, e.target.dataset.num);
     demoTranslate.innerText = index + 1 + ". " + tenTest[index].answer;
@@ -209,14 +209,14 @@ function test10Fun(e) {
     var correct = 0;
     var wrong = 0;
     //Check annswer
-        Tests.putTest(tenTest[index]);
-        showAnswerButton.addEventListener("click", (e) => {
-            
-          
-            if(index < tenTest.length) {
+    Tests.putTest(tenTest[index]);
+    showAnswerButton.addEventListener("click", (e) => {
+
+
+        if (index < tenTest.length) {
             if (Tests.checkIsEmptyDemoWord()) {
                 if (Tests.checkIsCorrect()) {
-                    demoButtonWord.innerHTML = `<span class='correctAnswer'>Офарин! Шумо дурст ҷавоб додед! <br> ${tenTest[index].question} </span>`;
+                    demoButtonWord.innerHTML = `<span class='correctAnswer'>Крута! Вы ответили правильно! <br> ${tenTest[index].question} </span>`;
                     Tests.removeClass();
                     showAnswerButton.disabled = true;
                     nextQuestion.disabled = false
@@ -225,10 +225,10 @@ function test10Fun(e) {
                     correct++
                 } else {
                     demoButtonWord.innerHTML = `<span style='color: red;' class='correctAnswer'>
-                    Шумо нодуруст ҷавоб додед! <br>Ҷавоби дуруст: 
+                    Хмм! Вы неправильно ответили <br>Парвильное это: 
                     <span style='color: teal;'>${tenTest[index].question} </span>
                      </span>`;
-                      Tests.removeClass();
+                    Tests.removeClass();
                     showAnswerButton.disabled = true;
                     nextQuestion.disabled = false
                     spans[index].style.background = 'red'
@@ -238,7 +238,7 @@ function test10Fun(e) {
             } else {
                 Tests.checkIsEmptyDemoWord()
             }
-            if (index < tenTest.length ) {
+            if (index < tenTest.length) {
                 nextQuestion.addEventListener("click", () => {
                     demoChek.innerHTML = ''
                     Tests.putTest(tenTest[index]);
@@ -246,27 +246,28 @@ function test10Fun(e) {
                     nextQuestion.disabled = true
                     demoTranslate.innerText = index + 1 + ". " + tenTest[index].answer;
 
-                })} else{
-                    nextQuestion.style.display = 'none'
-                    showAnswerButton.style.display ='none'
-                    newWorkButton.style.display = ''
-                    newTest.style.display = ''
-                    newWorkButton.onclick = (e) => {
-                        demoChek.innerHTML = ''
-                        demoTranslate.innerHTML = ''
-                        demoButtonWord.innerHTML = `
+                })
+            } else {
+                nextQuestion.style.display = 'none'
+                showAnswerButton.style.display = 'none'
+                newWorkButton.style.display = ''
+                newTest.style.display = ''
+                newWorkButton.onclick = (e) => {
+                    demoChek.innerHTML = ''
+                    demoTranslate.innerHTML = ''
+                    demoButtonWord.innerHTML = `
                         <div class="ansewrAll">
                         <p>Ҷавоби дуруст кор кардаи шумо: ${correct} </p>
                         <p>Ҷавоби нодуруст кор кардаи шумо: ${wrong}</p>
                     </div>
                         `
-                    }
                 }
-            } 
-        })
-       
+            }
+        }
+    })
 
-   
+
+
 
 }
 
@@ -290,14 +291,14 @@ function beOkhir(e) {
 
 
 
-    showAnswerButton.onclick = ()=> {
-        if(Tests.checkIsEmptyDemoWord()){
-            if(Tests.checkIsCorrect()){
+    showAnswerButton.onclick = () => {
+        if (Tests.checkIsEmptyDemoWord()) {
+            if (Tests.checkIsCorrect()) {
                 Tests.removeClass()
                 demoButtonWord.innerHTML = `<span class='correctAnswer'>Офарин! Шумо дурст ҷавоб додед! <br> ${Tests.question.question} </span>`;
                 showAnswerButton.disabled = true;
                 nextQuestion.disabled = false
-            } else{
+            } else {
                 showAnswerButton.disabled = true;
                 nextQuestion.disabled = false
                 Tests.removeClass();
@@ -309,9 +310,9 @@ function beOkhir(e) {
         }
     }
 
-    nextQuestion.onclick = ()=>{
+    nextQuestion.onclick = () => {
         demoButtonWord.innerHTML = ''
-        demoChek.innerHTML =''
+        demoChek.innerHTML = ''
         Tests.putTest(randomTest());
         showAnswerButton.disabled = false;
         nextQuestion.disabled = true;
