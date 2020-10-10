@@ -7,3 +7,6 @@
 It is look like duolingo 
 
 <img src='englishApp/img/engMain.png'>
+
+Exersice!
+<img src='englishApp/img/app.png'>
